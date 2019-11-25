@@ -25,3 +25,9 @@ application {
     // Define the main class for the application.
     mainClassName = "org.example.fizzbuzz.FizzBuzz"
 }
+
+tasks.withType(Jar::class){
+    manifest {
+        attributes["Main-Class"] =  "org.example.fizzbuzz.FizzBuzz"
+    }
+}
